@@ -6,13 +6,17 @@ set nocompatible
 syntax on
 
 set number
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+set incsearch
 set clipboard=unnamed
 
 let mapleader = ","
 
 nnoremap t <C-]>
-set incsearch
+nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+nnoremap <Up> <C-w>-
+nnoremap <Down> <C-w>+
+nnoremap <Left> <C-w><
+nnoremap <Right> <C-w>>
 
 "=============================================================
 " Vundle
