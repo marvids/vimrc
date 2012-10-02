@@ -11,12 +11,23 @@ set clipboard=unnamed
 
 let mapleader = ","
 
+" Follow tags
 nnoremap t <C-]>
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+
+" Change window size with arrow keys
 nnoremap <Up> <C-w>-
 nnoremap <Down> <C-w>+
 nnoremap <Left> <C-w><
 nnoremap <Right> <C-w>>
+
+" Navigate windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-h> <c-w>h
+
+" Toggle NERDTree
+map <leader>n :NERDTreeToggle<CR>
 
 "=============================================================
 " Vundle
