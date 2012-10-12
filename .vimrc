@@ -8,17 +8,26 @@ syntax on
 set number
 set incsearch
 set clipboard=unnamed
+set backspace=indent,eol,start
 
 let mapleader = ","
 
 " Follow tags
 nnoremap t <C-]>
 
+" Move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
 " Change window size with arrow keys
-nnoremap <Up> <C-w>-
-nnoremap <Down> <C-w>+
-nnoremap <Left> <C-w><
-nnoremap <Right> <C-w>>
+nnoremap <C-Up> <C-w>-
+nnoremap <C-Down> <C-w>+
+nnoremap <C-Left> <C-w><
+nnoremap <C-Right> <C-w>>
 
 " Navigate windows
 nnoremap <c-j> <c-w>j
@@ -48,7 +57,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
- 
+
 " vim-scripts repos
 Bundle 'c.vim'
 Bundle 'ctrlp.vim'
