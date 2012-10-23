@@ -44,12 +44,13 @@ map <leader>n :NERDTreeToggle<CR>
 
 filetype off                   " required!
 
-set rtp+=$USERPROFILE/vimfiles/bundle/vundle/
-call vundle#rc('$USERPROFILE/vimfiles/bundle/')
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'marvids/mkf'
 
 " My Bundles here:
 "
@@ -60,6 +61,7 @@ Bundle 'scrooloose/nerdtree.git'
 " vim-scripts repos
 Bundle 'c.vim'
 Bundle 'ctrlp.vim'
+Bundle 'wikipedia.vim'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
