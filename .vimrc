@@ -56,6 +56,7 @@ Bundle 'marvids/mkf'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
 
 " vim-scripts repos
