@@ -10,7 +10,7 @@ set incsearch
 set clipboard=unnamed
 set backspace=indent,eol,start
 set undofile
-set undodir=$USERPROFILE/vimfiles/undo/
+let &undodir=g:my_vimfiles_path.'undo/'
 
 let mapleader = ","
 
@@ -53,8 +53,8 @@ nnoremap <leader>u :GundoToggle<CR>
 
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+let &rtp.=','.g:my_vimfiles_path.'bundle/vundle/'
+call vundle#rc(g:my_vimfiles_path.'bundle/')
 
 " let Vundle manage Vundle
 " required! 
