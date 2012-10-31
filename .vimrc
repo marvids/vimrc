@@ -65,10 +65,11 @@ Bundle 'marvids/mkf'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'othree/xml.vim'
 Bundle 'sjl/gundo.vim.git'
+Bundle 'gregsexton/gitv'
 
 " vim-scripts repos
 Bundle 'c.vim'
