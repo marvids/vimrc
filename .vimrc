@@ -53,17 +53,19 @@ nnoremap <leader>u :GundoToggle<CR>
 
 filetype off                   " required!
 
-set rtp+=$USERPROFILE/vimfiles/bundle/vundle/
-call vundle#rc('$USERPROFILE/vimfiles/bundle/')
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+Bundle 'marvids/mkf'
 
 " My Bundles here:
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'othree/xml.vim'
 Bundle 'sjl/gundo.vim.git'
@@ -72,6 +74,7 @@ Bundle 'sjl/gundo.vim.git'
 Bundle 'c.vim'
 Bundle 'ctrlp.vim'
 Bundle 'vimwiki'
+Bundle 'wikipedia.vim'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
