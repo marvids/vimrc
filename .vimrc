@@ -1,8 +1,11 @@
-set nocompatible
+if !exists("my_vimfiles_path")
+    let my_vimfiles_path = "~/.vim/"
+endif
 
 "=============================================================
 " My settings
 "=============================================================
+set nocompatible
 syntax on
 
 set number
@@ -10,7 +13,7 @@ set incsearch
 set clipboard=unnamed
 set backspace=indent,eol,start
 set undofile
-let &undodir=g:my_vimfiles_path.'undo/'
+let &undodir=my_vimfiles_path.'undo/'
 
 let mapleader = ","
 
@@ -53,8 +56,8 @@ nnoremap <leader>u :GundoToggle<CR>
 
 filetype off                   " required!
 
-let &rtp.=','.g:my_vimfiles_path.'bundle/vundle/'
-call vundle#rc(g:my_vimfiles_path.'bundle/')
+let &rtp.=','.my_vimfiles_path.'bundle/vundle/'
+call vundle#rc(my_vimfiles_path.'bundle/')
 
 " let Vundle manage Vundle
 " required! 
@@ -65,11 +68,12 @@ Bundle 'marvids/mkf'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'othree/xml.vim'
 Bundle 'sjl/gundo.vim.git'
 Bundle 'gregsexton/gitv'
+Bundle 'msanders/snipmate.vim'
 
 " vim-scripts repos
 Bundle 'c.vim'
