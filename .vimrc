@@ -50,6 +50,12 @@ map <leader>n :NERDTreeToggle<CR>
 " Toggle Gundo
 nnoremap <leader>u :GundoToggle<CR>
 
+" Task List
+map <leader>td <Plug>TaskList
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! %!sudo tee > /dev/null %
+
 "=============================================================
 " Vundle
 "=============================================================
@@ -68,18 +74,26 @@ Bundle 'marvids/mkf'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git.git'
+Bundle 'tpope/vim-surround.git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'msanders/snipmate.vim'
 Bundle 'othree/xml.vim'
 Bundle 'sjl/gundo.vim.git'
 Bundle 'gregsexton/gitv'
-Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab.git'
+Bundle 'sontek/minibufexpl.vim.git'
+Bundle 'sontek/rope-vim.git'
+Bundle 'fs111/pydoc.vim'
+Bundle 'scrooloose/syntastic'
 
 " vim-scripts repos
 Bundle 'c.vim'
 Bundle 'ctrlp.vim'
 Bundle 'vimwiki'
 Bundle 'wikipedia.vim'
+Bundle 'TaskList.vim'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
